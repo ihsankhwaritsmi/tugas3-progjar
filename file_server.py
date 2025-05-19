@@ -53,10 +53,7 @@ class Server(threading.Thread):
             self.the_clients.append(clt)
 
 
-def main():
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     svr = Server(ipaddress="0.0.0.0", port=6789)
     svr.start()
-
-
-if __name__ == "__main__":
-    main()

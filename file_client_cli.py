@@ -84,7 +84,7 @@ def remote_upload(filepath=""):
     hasil = send_command(command_str)
 
     if hasil and hasil.get("status") == "OK":
-        print(f"File '{filename}' berhasil diupload.")
+        print(f"File '{filename}' berhasil di-Upload.")
         return True
     else:
         print("Upload gagal.")
