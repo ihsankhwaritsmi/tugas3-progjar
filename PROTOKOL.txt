@@ -40,10 +40,10 @@ GET
   - data: pesan kesalahan
 
 UPLOAD
-* TUJUAN: untuk mengunggah file baru ke dalam server
+* TUJUAN: untuk mengunggah (upload) file baru ke dalam server
 * PARAMETER:
-  - PARAMETER1 : nama file (misal "gambar.png")
-  - PARAMETER2 : isi file dalam format base64 (wajib dikutip)
+  - PARAMETER1 : nama file (misal "image.jpg")
+  - PARAMETER2 : file dalam format base64
 * RESULT:
  - BERHASIL:
    - status: OK

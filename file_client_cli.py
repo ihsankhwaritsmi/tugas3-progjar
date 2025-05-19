@@ -110,5 +110,5 @@ if __name__ == "__main__":
     server_address = ("172.16.16.101", 6789)
     remote_list()
     remote_get('donalbebek.png')
-    remote_upload('files/shrek.jpg')
+    remote_upload('shrek.jpg')
     # remote_delete("shrek.jpg")
