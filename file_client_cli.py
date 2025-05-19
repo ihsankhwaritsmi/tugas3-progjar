@@ -79,12 +79,10 @@ def remote_upload(filepath=""):
     encoded_data = base64.b64encode(file_data).decode()
 
     filename = os.path.basename(filepath)
-    # Format command upload dengan nama file dan isi base64, misal:
-    # UPLOAD nama_file base64encodedstring
-    # Karena base64 bisa sangat panjang, lebih baik gunakan kutipan agar parsing lebih aman
     command_str = f'UPLOAD "{filename}" "{encoded_data}"'
 
     hasil = send_command(command_str)
+
     if hasil and hasil.get("status") == "OK":
         print(f"File '{filename}' berhasil diupload.")
         return True
@@ -111,6 +109,6 @@ def remote_delete(filename=""):
 if __name__ == "__main__":
     server_address = ("172.16.16.101", 6789)
     remote_list()
-    # remote_get('donalbebek.png')
-    # remote_upload('shrek.jpg')
-    remote_delete("shrek.jpg")
+    remote_get('donalbebek.png')
+    remote_upload('files/shrek.jpg')
+    # remote_delete("shrek.jpg")
